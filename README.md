@@ -111,7 +111,23 @@ int main()
 }
 ```
 
-## step0_輾轉相除法
+## step03_輾轉相除法
 ```cpp
-
+#include <stdio.h>
+int main()
+{
+    long long int a,b,c;
+    scanf("%lld %lld",&a,&b);
+    while (1){
+        c=a%b;
+        printf ("a:%lld b:%lld c:%lld\n",a,b,c);
+        if (c==0) break;
+        a = b;
+        b = c;
+    }
+    printf ("最大公因數:%lld\n",b);
+}
 ```
+
+## step04_重複做求除以10的餘數後再除10，就可以輸出1234567890的個位數=0~1
+```cpp
