@@ -96,3 +96,22 @@ int main()
     printf("%d\n%lld",n,a);
 }
 ```
+
+## step02_最大公因數
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b,i,z;
+    scanf("%lld %lld",&a,&b);
+    for (i=1;i<=a;i++){
+        if (a%i==0 && b%i==0) z=i;
+    }
+    printf("最大公因數:%lld",z);
+}
+```
+
+## step0_輾轉相除法
+```cpp
+
+```
