@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-# step02-2_介紹輾轉相除法
+## step02-2_介紹輾轉相除法
 ```cpp
 #include <stdio.h>
 int main()
@@ -82,5 +82,17 @@ int main()
         }
     }
     printf("中的是:%d",b);
+}
+```
+
+# week07
+## step01_寫很長很長的整數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=9876543210;
+    long long int a=9876543210;
+    printf("%d\n%lld",n,a);
 }
 ```
