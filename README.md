@@ -158,3 +158,104 @@ int main()
     n/=10;
 }
 ```
+
+# week08
+## step01_判斷一個質數，如果n跟任意一個數整除，bad變1，如果bad=0，n是質數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n,i,bad=0;
+    scanf("%d",&n);
+    for (i=2;i<n;i++){
+        if (n%i==0) bad=1;
+    }
+    if (bad==0) printf("%d是質數",n);
+    else printf("%d不好，不是質數",n);
+}
+```
+
+## step02_重複做將n代入2到a中，如果n沒跟2到<n的任意數整除，bad=0，n等於質數，列出n，最後就會列出a的所有因數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for (int n=2;n<=a;n++){
+        int bad=0;
+        for (int i=2;i<n;i++){
+            if (n%i==0) bad=1;
+        }
+        if (bad==0) printf("%d",n);
+    }
+}
+```
+
+## step03_重複執行"輸入n，sum=sum+n"5次，就會得到5個n的總和
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n,i,sum=0;
+    printf("請輸入5個數字(要加起來):");
+    for (i=0;i<5;i++){
+        scanf("%d",&n);
+        sum+=n;
+    }
+    printf("總和是:%d",sum);
+}
+```
+
+## step04_複習for迴圈的直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n,i,k;
+    scanf("%d",&n);
+    for (i=1;i<=n;i++){
+        for (k=1;k<=n-i;k++) printf(" ");
+        for (k=1;k<=i;k++) printf("*");
+        printf("\n");
+    }
+}
+```
+
+## step05_只用兩個for迴圈的直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n,i,k;
+    scanf("%d",&n);
+    for (i=1;i<=n;i++){
+        for (k=1;k<=n;k++){
+            if (k<=n-i) printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+
+## step06_兩個while迴圈的直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int i=1;
+    while (i<=n){
+        int k=1;
+        while (k<=n){
+            if (k<=n-i) printf(" ");
+            else printf("*");
+            k++;
+        }
+        printf("\n");
+        i++;
+    }
+}
+```
