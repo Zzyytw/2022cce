@@ -294,8 +294,3 @@ int main()
     for (int i=3;i>=0;i--) printf("a[%d]:%d\n",i,a[i]);
 }
 ```
-
-## step04_
-```cpp
-
-```
